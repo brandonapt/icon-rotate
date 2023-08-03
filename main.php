@@ -158,6 +158,11 @@ function validateCookie() {
 function getRandomThumbnail() {
     global $files1;
     $rand = rand(0, count($files1) - 1);
+    // make sure the thumbnail isnt the same as the last one
+    $pastIcon = getConfig("pastIcon");
+    if ($pastIcon == $files1[$rand]) {
+        return getRandomThumbnail();
+    }
     return $files1[$rand];
 }
 
