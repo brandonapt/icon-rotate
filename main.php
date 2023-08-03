@@ -7,19 +7,25 @@ use GuzzleHttp\RequestOptions;
 // define config
 
 // roblox .ROBLOSECURITY cookie
-$ROBLOX_COOKIE = "_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_782F368E1A0833090596A0B93EA84B9F93279D707DE9B984914BBE4A306351AAE561AAFCFDA1C57FAC7CBC2BFB2D4A987CC4F168939DA9B8D978ADAC4ED8C5804B94BFBCC66FFB3CAF9654B35D27AB5224445562D29CFB50941F936DA811237A85EDDBD5A03C942F552410A6E21056E642B739752F2FF07A83D15A3764C5DD8E4BAA642C582424719E3D9C7078CCA9CEBAF64FCAD2786AFDFFE8FFA32509C53236EF68C8069EE6F2CBB5FD5B4EFFD6DDE408B6FF998709189150940257B252DD1379F6938854E07424CB897FB10A79F36C76875CD667E0482A38CFD90154EEE81421512E5A343482BAAF6B3D685106EFD0BA3E67E4294EECA13ADF1C7E8547BC95C688FB899BF8BAE16E190E904AEAA5168286ED8D9B4BBFC68869727E70B383305CE0775D331916133586B9F4456F4A33D343856CF2A7BE01DB5B946B045C24CAAB7957A46F8E145DD7A7ADC3EF083B54BFC2C58DC103FF1D24E9320E4B9928FB9F1675";
+// EXAMPLE VALUE: "_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_BLEHHHH"
+$ROBLOX_COOKIE = "";
 
 // PLACE ID of the game you want to monitor
+// EXAMPLE VALUE: "6647706396"
 $PLACE_ID = "6647706396";
 
 // the directory to get thumbnails from
+// EXAMPLE VALUE: "/thumbnails"
 $THUMBNAILS_DIR = "/thumbnails";
 
 // the thumbnail to start with for the IN_ORDER option. if left blank, it will randomly select one from the directory. 
-$STARTING_THUMBNAIL = "2.png";
+// EXAMPLE VALUE: "2.png"
+$STARTING_THUMBNAIL = "";
 
-// the order to go through the thumbnails. if true, you need your thumbnails to be named 1.png, 2.png, 3.png, etc. if false, it will randomly select one from the directory
-$IN_ORDER = true;
+// the order to go through the thumbnails. if true, you need your thumbnails to be named 1.png, 2.png, 3.png, etc. (or itll error) if false, it will randomly select one from the directory
+// EXAMPLE VALUE: true
+$IN_ORDER = false;
+
 // END OF CONFIG. DON'T TOUCH FROM HERE
 
 $jar = \GuzzleHttp\Cookie\CookieJar::fromArray(
