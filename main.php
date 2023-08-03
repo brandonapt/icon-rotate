@@ -60,8 +60,6 @@ $files1 = array_filter($files1, function($item) {
 // reindex array
 $files1 = array_values($files1);
 
-print_r($files1);
-
 echo("Found " . count($files1) . " thumbnails.\n");
 
 echo("Working...\n");
